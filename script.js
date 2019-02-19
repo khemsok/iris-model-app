@@ -58,7 +58,7 @@ app.post('/test', function (req, res) {
 })
 
 
-app.listen(3001, function () {
+app.listen(process.env.PORT, process.env.IP, function () {
     console.log('Server started')
 })
 
