@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <title>IRIS APP</title>
+</head>
+<style>
+    body{
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+    input {
+        border: none;
+        border-bottom: 1px solid black;
+        padding: 10px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    *:focus{
+        outline: none;
+    }
+
+    button{
+        background-color: black;
+        color: white;
+        border: none;
+        width: 100px;
+        height: 20px;
+        transition: 0.3s ease-in;
+        border-radius: 10px;
+        font-family: 'Roboto Condensed', sans-serif;
+
+    }
+
+    button:hover{
+        background-color: rgb(101, 101, 247);
+    }
+</style>
+
+<body>
+    <h1 style='text-align: center'>IRIS MODEL APP</h1>
+    <form action="/test" method='post'>
+        <input onblur="this.placeholder = 'Sepal Length'"onfocus = "this.placeholder = ''" style='display: block; margin: 10px auto; text-align: center' placeholder='Sepal Length' type="text"
+            name='col1'>
+        <input onblur="this.placeholder = 'Sepal Length'"onfocus = "this.placeholder = ''" type="text" style='display: block; margin: 10px auto; text-align: center' placeholder='Sepal Width'
+            name='col2'>
+        <input onblur="this.placeholder = 'Sepal Length'"onfocus = "this.placeholder = ''" type="text" style='display: block; margin: 10px auto; text-align: center' placeholder='Petal Length'
+            name='col3'>
+        <input onblur="this.placeholder = 'Sepal Length'"onfocus = "this.placeholder = ''" type="text" style='display: block; margin: 10px auto; text-align: center' placeholder='Petal Width'
+            name='col4'>
+        <button style='display: block; margin: 0 auto'>Submit</button>
+        <h2 style='text-align: center'><%=predicted%></h2>
+    </form>
+
+</body>
+
+</html>
